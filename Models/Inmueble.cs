@@ -18,8 +18,9 @@ namespace Api_Inmobiliaria.Models
 		
 		[Required(ErrorMessage = "La dirección es requerida")]
 		public string? Direccion { get; set; }
-		[Column("ambiente")]
+		
 		[Required]
+		[Column("ambiente")]
 		public int Ambientes { get; set; }
 		
 		[Column("latitud")]

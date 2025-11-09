@@ -127,7 +127,7 @@ namespace Api_Inmobiliaria.Controllers
                 int idPropietario = int.Parse(User.Identity?.Name ?? "0");
 
                 nuevo.PropietarioId = idPropietario;
-                nuevo.Habilitado = false; // deshabilitado por defecto
+                nuevo.Habilitado = false; 
 
                 if (imagen != null && imagen.Length > 0)
                 {
