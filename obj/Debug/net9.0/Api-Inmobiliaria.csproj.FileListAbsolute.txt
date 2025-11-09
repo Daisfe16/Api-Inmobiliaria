@@ -44,3 +44,4 @@ C:\Users\usuario\Desktop\Api-Inmobiliaria\obj\Debug\net9.0\refint\Api-Inmobiliar
 C:\Users\usuario\Desktop\Api-Inmobiliaria\obj\Debug\net9.0\Api-Inmobiliaria.pdb
 C:\Users\usuario\Desktop\Api-Inmobiliaria\obj\Debug\net9.0\Api-Inmobiliaria.genruntimeconfig.cache
 C:\Users\usuario\Desktop\Api-Inmobiliaria\obj\Debug\net9.0\ref\Api-Inmobiliaria.dll
+C:\Users\usuario\Desktop\Api-Inmobiliaria\obj\Debug\net9.0\Api-Inmobiliaria.sourcelink.json

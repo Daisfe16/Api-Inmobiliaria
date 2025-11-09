@@ -7,6 +7,7 @@ using Api_Inmobiliaria.Models;
 namespace Api_Inmobiliaria.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class InmueblesController : ControllerBase
     {
@@ -16,7 +17,7 @@ namespace Api_Inmobiliaria.Controllers
         {
             this.context = context;
         }
-        [Authorize]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerInmueblePorId(int id)
         {
@@ -53,7 +54,7 @@ namespace Api_Inmobiliaria.Controllers
         }
 
         // Obtener todos los inmueble del propietario logueado ..(Revisar )
-        [Authorize]
+       
         [HttpGet("propietario")]
         public async Task<IActionResult> ObtenerPorPropietario()
         {
@@ -88,7 +89,7 @@ namespace Api_Inmobiliaria.Controllers
         }
         //Endpoint para hablitar o deshabilitar
 
-        [Authorize]
+        
         [HttpPut("cambiarestado/{id}")]
         public async Task<IActionResult> CambiarEstado(int id)
         {
@@ -117,7 +118,7 @@ namespace Api_Inmobiliaria.Controllers
             }
         }
         // endpoint para agregar inmuebleee...
-        [Authorize]
+       
         [HttpPost("agregar")]
         public async Task<IActionResult> AgregarInmueble([FromForm] Inmueble nuevo, IFormFile? imagen)
         {

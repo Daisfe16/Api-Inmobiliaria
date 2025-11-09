@@ -5,7 +5,8 @@ using Api_Inmobiliaria.Models;
 
 namespace Api_Inmobiliaria.Controllers
 {
-    [ApiController]
+    [ApiController] 
+    [Authorize]
     [Route("api/[controller]")]
     public class ContratoController : ControllerBase
     {
@@ -18,7 +19,7 @@ namespace Api_Inmobiliaria.Controllers
 
 
         // Listo loscontratos por inmuebles del propietario y sus pagos
-        [Authorize]
+        
         [HttpGet("inmuebles/{idInmueble}")]
         public async Task<IActionResult> ListarContratosPorInmueble(int idInmueble)
         {

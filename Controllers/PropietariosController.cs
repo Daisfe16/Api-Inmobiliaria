@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 namespace Api_Inmobiliaria.Controllers
 {
 	[ApiController]
+	[Authorize]
 	[Route("api/[controller]")]
 	public class Propietarios : ControllerBase
 	{
@@ -31,7 +32,7 @@ namespace Api_Inmobiliaria.Controllers
 		}
 
 		//obtener perfil propietario... 
-		[Authorize]
+		
 		[HttpGet("perfil")]
 
 		public async Task<IActionResult> ObtenerPerfil()
@@ -47,7 +48,7 @@ namespace Api_Inmobiliaria.Controllers
 
 			return Ok(propietario);
 		}
-		[Authorize]
+		
 		[HttpPut("editar")]
 		public async Task<IActionResult> EditarPerfil([FromBody] PropietarioEditarDTO dto)
 		{
@@ -75,7 +76,7 @@ namespace Api_Inmobiliaria.Controllers
 				return BadRequest(ex.Message);
 			}
 		}
-		[Authorize]
+		
 		[HttpPut("cambiar-clave")]
 		public async Task<IActionResult> CambiarClave([FromBody] CambiarClaveDTO dto)
 		{
@@ -117,7 +118,7 @@ namespace Api_Inmobiliaria.Controllers
 				return BadRequest(ex.Message);
 			}
 		}
-
+		
 		[HttpPost("hash")]
 		public async Task<IActionResult> Hashear([FromQuery] string clave)
 		{
